@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb+srv://teslarohit369:ctaPltdyieu1evnr@paytmcluster.3gtne.mongodb.net/");
 console.log("mongoDB connected");
 
 const userSchema = mongoose.Schema({
     username: {
         type: String,
         required: true,
-        unique: true,
-        trim: true,
         lowercase: true,
         minLength: 3,
         maxLength: 30
@@ -21,13 +19,11 @@ const userSchema = mongoose.Schema({
     firstName: {
         type: String,
         required: true,
-        trim: true,
         maxLength: 50
     },
     lastName: {
         type: String,
         required: true,
-        trim: true,
         maxLength: 50
     }
 })
