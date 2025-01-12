@@ -1,5 +1,5 @@
 const express = require("express");
 
-const routes = express.Router();
+const router = express.Router();
  
-module.exports = routes; 
+module.exports = router; 
